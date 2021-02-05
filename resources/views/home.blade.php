@@ -11,8 +11,12 @@
 	<ul>
 		@foreach($comments as $comment)
 			<li>
-				<b>{{ $comment->name }}</b>
-				({{ $comment->updated_at->diffForHumans() }})
+				<b>{{ $comment->name }}</b> 
+				@if($comment->created_at != $comment->updated_at)
+					(edited) 
+				@endif
+				({{ $comment->created_at->diffForHumans() }})
+				<a href="/comment/{{ $comment->id }}">View</a>
 				<br>
 				{{ $comment->content }}
 			</li>
