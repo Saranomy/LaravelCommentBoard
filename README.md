@@ -1,6 +1,6 @@
 ## Comment Board
 
-An example of Comment Board using PHP Laravel framework.
+An example of Comment Board using PHP Laravel framework. A user can post a name+comment to the comment board, and view each comment in order to edit or remove the comment. Use mysql for the database server.
 
 ## License
 
